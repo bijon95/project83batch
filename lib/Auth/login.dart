@@ -8,6 +8,9 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  TextEditingController phone_ct = TextEditingController();
+  TextEditingController pass_ct = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,9 +22,13 @@ class _LoginState extends State<Login> {
           children: [
             Text("Enter your Mobile no and password"),
             TextField(
+              controller: phone_ct,
 
             ),
-            TextField(),
+            TextField(
+              controller: pass_ct,
+
+            ),
 
             Container(
               margin: EdgeInsets.only(top: 30),
