@@ -14,7 +14,7 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   TextEditingController phone_ct = TextEditingController();
   TextEditingController pass_ct = TextEditingController();
-var msg ="";
+  var msg ="";
   usereLogin()async{
     String url = "https://api.ishaqi.com/customerlogin";
     Uri myuri = Uri.parse(url);
@@ -34,7 +34,7 @@ var msg ="";
       var data = jsonDecode(responce.body);
       msg = data["message"];
       if(data["status"]=="SUCCESS"){
-        
+
         Navigator.push(context, MaterialPageRoute(builder: (builder)=> HomePage()));
       }
       setState(() {
@@ -75,10 +75,10 @@ var msg ="";
                 height: 60,
 
                 width: 200,
-                  decoration: BoxDecoration(
+                decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.circular(15)
-                  ),
+                ),
                 child: Center(child: Text("Login",style: TextStyle(fontSize: 24,color: Colors.white),)),
               ),
             )
