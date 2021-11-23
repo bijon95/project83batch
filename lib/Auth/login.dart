@@ -79,7 +79,7 @@ class _LoginState extends State<Login> {
                     color: Colors.red,
                     borderRadius: BorderRadius.circular(15)
                 ),
-                child: Center(child: Text("Login",style: TextStyle(fontSize: 24,color: Colors.white),)),
+                child: Center(child: Text("Loginn",style: TextStyle(fontSize: 24,color: Colors.white),)),
               ),
             )
           ],
