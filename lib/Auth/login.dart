@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -10,6 +11,17 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   TextEditingController phone_ct = TextEditingController();
   TextEditingController pass_ct = TextEditingController();
+
+  usereLogin()async{
+    String url = "";
+    Uri myuri = Uri.parse(url);
+    var client = http.Client();
+    var responce = client.post(myuri,body: );
+
+
+    print(responce);
+
+  }
 
   @override
   Widget build(BuildContext context) {
