@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project83batch/splash_screen/splash_screen.dart';
 
 import 'Auth/login.dart';
 import 'homepage.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Login(),
+      home: SplashScreen(),
     );
   }
 }
