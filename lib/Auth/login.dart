@@ -2,7 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:project83batch/Auth/registration.dart';
 import 'package:project83batch/homepage.dart';
+
+import 'newdrower.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -48,9 +51,20 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Login"),
-        ),
+      appBar: AppBar(title: Text("Login"),
+          actions: [
+
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (builder)=>Nwdrawer()));
+              },
+              child:
+              Icon(Icons.settings),)]
+
+      ),
+        // appBar: AppBar(
+        //   title: Text("Login"),
+        // ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -81,7 +95,18 @@ class _LoginState extends State<Login> {
                 ),
                 child: Center(child: Text("Loginn",style: TextStyle(fontSize: 24,color: Colors.white),)),
               ),
-            )
+            ),
+            Container(margin: EdgeInsets.all(10),
+              child: Center(child: Text('Forgot Password?'),),),
+            Container(margin: EdgeInsets.all(10),
+              child: Center(child:
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>Registration()));
+                },
+                child:
+
+              Text("Don't have account? sign in" ),),),)
           ],
         ));
   }
